@@ -2,6 +2,15 @@
 @section('title', 'Adicionar um produto')
 @section('content')
   <h1>Criar um novo produto</h1>
+  @if(count($errors)>0)
+    <div class="alert alert-danger">
+      <ul>
+        @foreach($errors->all() as $error)
+          <li>{{$error}}</li>
+        @endforeach
+      </ul>
+    </div>
+  @endif
   {{Form::open(['action' => 'ProdutosController@store'])}}
 
   {{Form::label('referencia', 'Referência')}}
@@ -19,5 +28,4 @@
   <br/>
   {{Form::submit('Cadastar',['class'=>'btn btn-outline-dark'])}}
   {{Form::close()}}
-
   @endsection
