@@ -25,6 +25,9 @@
   {{Form::label('preco','Preço')}}
   {{Form::text('preco','',['class'=>'form-control','required','placeholder'=>'Preço'])}}
 
+  {{Form::label('fotoproduto','Foto')}}
+  {{Form::file('fotoproduto',['class'=>'form-control','id'=>'fotoproduto'])}}
+
   <br/>
   {{Form::submit('Cadastar',['class'=>'btn btn-outline-dark'])}}
   {{Form::close()}}
