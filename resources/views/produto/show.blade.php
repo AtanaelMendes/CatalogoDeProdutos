@@ -14,7 +14,8 @@
         @if(file_exists("./img/produtos/" . md5($produto->id) . ".jpg"))
         <div class="col-md-6 col-sm-6 col-lg-6">
           <div class="img-fluid">
-              {{Html::image(asset("img/produtos/" . md5($produto->id) . ".jpg"))}}
+            <!--{{Html::image(asset("img/produtos/" . md5($produto->id) . ".jpg"))}} -->
+              <img src="{{asset('img/produtos/'. md5($produto->id).'.jpg')}}" class="img-fluid" title="Trocar Foto">
           </div>
         </div>
         @endif
